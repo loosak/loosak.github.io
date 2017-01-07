@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>LoosBlos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="title: ESP8266 on microPython
+ESP8266 on microPythonUnofficial Micropython ESP8266 Nightly Buildhttps://micropython.org/download/#esp8266
+1234wget http://www.kaltpost.de/~wendlers/micropython/mp-esp82">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LoosBlos">
+<meta property="og:url" content="http://loosak.github.io/hexo-documentation/2017/01/07/microPython/index.html">
+<meta property="og:site_name" content="LoosBlos">
+<meta property="og:description" content="title: ESP8266 on microPython
+ESP8266 on microPythonUnofficial Micropython ESP8266 Nightly Buildhttps://micropython.org/download/#esp8266
+1234wget http://www.kaltpost.de/~wendlers/micropython/mp-esp82">
+<meta property="og:image" content="http://www.cnx-software.com/wp-content/uploads/2015/10/NodeMCU_v0.9_Pinout.png">
+<meta property="og:updated_time" content="2017-01-07T17:45:41.763Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LoosBlos">
+<meta name="twitter:description" content="title: ESP8266 on microPython
+ESP8266 on microPythonUnofficial Micropython ESP8266 Nightly Buildhttps://micropython.org/download/#esp8266
+1234wget http://www.kaltpost.de/~wendlers/micropython/mp-esp82">
+<meta name="twitter:image" content="http://www.cnx-software.com/wp-content/uploads/2015/10/NodeMCU_v0.9_Pinout.png">
+  
+    <link rel="alternate" href="/atom.xml" title="LoosBlos" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/hexo-documentation/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/hexo-documentation/" id="logo">LoosBlos</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/hexo-documentation/">Home</a>
+        
+          <a class="main-nav-link" href="/hexo-documentation/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://loosak.github.io/hexo-documentation"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-microPython" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/hexo-documentation/2017/01/07/microPython/" class="article-date">
+  <time datetime="2017-01-07T17:45:41.763Z" itemprop="datePublished">07.01.2017</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>title: ESP8266 on microPython</p>
+<h1 id="ESP8266-on-microPython"><a href="#ESP8266-on-microPython" class="headerlink" title="ESP8266 on microPython"></a>ESP8266 on microPython</h1><h2 id="Unofficial-Micropython-ESP8266-Nightly-Build"><a href="#Unofficial-Micropython-ESP8266-Nightly-Build" class="headerlink" title="Unofficial Micropython ESP8266 Nightly Build"></a>Unofficial Micropython ESP8266 Nightly Build</h2><p><a href="https://micropython.org/download/#esp8266" target="_blank" rel="external">https://micropython.org/download/#esp8266</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wget http://www.kaltpost.de/~wendlers/micropython/mp-esp8266-firmware-latest.bin</div><div class="line"></div><div class="line">esptool.py --port /dev/ttyUSB0 erase_flash</div><div class="line">esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=8m 0 mp-esp8266-firmware-latest.bin</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>--b 115200</span><a href="/dev/ttyUSB0```">link</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">```Python</div><div class="line">list(5 * x + y for x in range(10) for y in [4, 2, 1])</div></pre></td></tr></table></figure>
+<p>To quit picocom, you need to press Ctrl-a, then Ctrl-q.</p>
+<p>For more information see:</p>
+<p><a href="https://github.com/micropython/micropython/tree/master/esp8266" target="_blank" rel="external">https://github.com/micropython/micropython/tree/master/esp8266</a><br><a href="http://micropython.org/resources/docs/en/latest/esp8266/esp8266/quickref.html" target="_blank" rel="external">http://micropython.org/resources/docs/en/latest/esp8266/esp8266/quickref.html</a></p>
+<h2 id="WebREPL-web-browser-interactive-prompt"><a href="#WebREPL-web-browser-interactive-prompt" class="headerlink" title="WebREPL (web browser interactive prompt)"></a>WebREPL (web browser interactive prompt)</h2><figure class="highlight plain"><figcaption><span>clone</span><a href="https://github.com/micropython/webrepl.git```" target="_blank" rel="external">link</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">```Python</div><div class="line">import webrepl</div><div class="line">webrepl.start()</div></pre></td></tr></table></figure>
+<h3 id="Listing-file-and-more"><a href="#Listing-file-and-more" class="headerlink" title="Listing file and more"></a>Listing file and more</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import os</div><div class="line">os.listdir()</div></pre></td></tr></table></figure>
+<p>Pressing ctrl-E will enter a special paste mode</p>
+<h3 id="DHT22"><a href="#DHT22" class="headerlink" title="DHT22"></a>DHT22</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import dht</div><div class="line">import machine, time</div><div class="line">d = dht.DHT22(machine.Pin(5))</div><div class="line">while True:</div><div class="line">  d.measure()</div><div class="line">  d.temperature(), d.humidity()</div><div class="line">  time.sleep(10)</div></pre></td></tr></table></figure>
+<h4 id="http-client"><a href="#http-client" class="headerlink" title="http client"></a>http client</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">import socket</div><div class="line"></div><div class="line">s.connect(addr)</div><div class="line">s.send(b&apos;GET /meteo/lastmeteodata HTTP/1.1\r\nHost: www.hvezdarna.cz\r\n\r\n&apos;)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">def http_get(url):</div><div class="line">    _, _, host, path = url.split(&apos;/&apos;, 3)</div><div class="line">    addr = socket.getaddrinfo(host, 80)[0][-1]</div><div class="line">    s = socket.socket()</div><div class="line">    s.connect(addr)</div><div class="line">    s.send(bytes(&apos;GET /%s HTTP/1.0\r\nHost: %s\r\n\r\n&apos; % (path, host), &apos;utf8&apos;))</div><div class="line">    while True:</div><div class="line">        data = s.recv(100)</div><div class="line">        if data:</div><div class="line">            print(str(data, &apos;utf8&apos;), end=&apos;&apos;)</div><div class="line">            raw_data = raw_data + str(data, &apos;utf8&apos;)</div><div class="line">            break</div></pre></td></tr></table></figure>
+<p><code>http_get(&#39;http://www.hvezdarna.cz/meteo/lastmeteodata&#39;)</code></p>
+<h2 id="NodeMCU-v0-9"><a href="#NodeMCU-v0-9" class="headerlink" title="NodeMCU v0.9"></a>NodeMCU v0.9</h2><h3 id="Pinout"><a href="#Pinout" class="headerlink" title="Pinout"></a>Pinout</h3><p><img src="http://www.cnx-software.com/wp-content/uploads/2015/10/NodeMCU_v0.9_Pinout.png" alt="Pinout"></p>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference:"></a>Reference:</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://loosak.github.io/hexo-documentation/hexo-documentation/2017/01/07/microPython/" data-id="cixniuk7z0003gwv0jebtgqqp" class="article-share-link">Delen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/hexo-documentation/2017/01/07/Svejk/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ouder</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archieven</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexo-documentation/archives/2017/01/">January 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recente berichten</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hexo-documentation/2017/01/07/microPython/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-documentation/2017/01/07/Svejk/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-documentation/2017/01/07/Samsung.Galaxy.S4/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-documentation/2017/01/07/Rasbian/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/hexo-documentation/2017/01/07/hello-there/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Loosak<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/hexo-documentation/" class="mobile-nav-link">Home</a>
+  
+    <a href="/hexo-documentation/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/hexo-documentation/fancybox/jquery.fancybox.css">
+  <script src="/hexo-documentation/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/hexo-documentation/js/script.js"></script>
+
+  </div>
+</body>
+</html>
