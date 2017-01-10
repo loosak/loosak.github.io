@@ -14,7 +14,7 @@
 <meta property="og:description" content="ESP8266 on microPythonUnofficial Micropython ESP8266 Nightly Buildhttps://micropython.org/download/#esp8266
 1234wget http://www.kaltpost.de/~wendlers/micropython/mp-esp8266-firmware-latest.binesptool.">
 <meta property="og:image" content="http://www.cnx-software.com/wp-content/uploads/2015/10/NodeMCU_v0.9_Pinout.png">
-<meta property="og:updated_time" content="2017-01-08T10:37:09.850Z">
+<meta property="og:updated_time" content="2017-01-10T18:00:15.574Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ESP8266 on microPython">
 <meta name="twitter:description" content="ESP8266 on microPythonUnofficial Micropython ESP8266 Nightly Buildhttps://micropython.org/download/#esp8266
@@ -92,11 +92,9 @@
       
         <h1 id="ESP8266-on-microPython"><a href="#ESP8266-on-microPython" class="headerlink" title="ESP8266 on microPython"></a>ESP8266 on microPython</h1><h2 id="Unofficial-Micropython-ESP8266-Nightly-Build"><a href="#Unofficial-Micropython-ESP8266-Nightly-Build" class="headerlink" title="Unofficial Micropython ESP8266 Nightly Build"></a>Unofficial Micropython ESP8266 Nightly Build</h2><p><a href="https://micropython.org/download/#esp8266" target="_blank" rel="external">https://micropython.org/download/#esp8266</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wget http://www.kaltpost.de/~wendlers/micropython/mp-esp8266-firmware-latest.bin</div><div class="line"></div><div class="line">esptool.py --port /dev/ttyUSB0 erase_flash</div><div class="line">esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_size=8m 0 mp-esp8266-firmware-latest.bin</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span>--b 115200</span><a href="/dev/ttyUSB0```">link</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">```python</div><div class="line">list(5 * x + y for x in range(10) for y in [4, 2, 1])</div></pre></td></tr></table></figure>
-<p>To quit picocom, you need to press Ctrl-a, then Ctrl-q.</p>
-<p>For more information see:</p>
-<p><a href="https://github.com/micropython/micropython/tree/master/esp8266" target="_blank" rel="external">https://github.com/micropython/micropython/tree/master/esp8266</a><br><a href="http://micropython.org/resources/docs/en/latest/esp8266/esp8266/quickref.html" target="_blank" rel="external">http://micropython.org/resources/docs/en/latest/esp8266/esp8266/quickref.html</a></p>
-<h2 id="WebREPL-web-browser-interactive-prompt"><a href="#WebREPL-web-browser-interactive-prompt" class="headerlink" title="WebREPL (web browser interactive prompt)"></a>WebREPL (web browser interactive prompt)</h2><figure class="highlight plain"><figcaption><span>clone</span><a href="https://github.com/micropython/webrepl.git```" target="_blank" rel="external">link</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">```Python</div><div class="line">import webrepl</div><div class="line">webrepl.start()</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>--b 115200</span><a href="/dev/ttyUSB0```">link</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<p>list(5 * x + y for x in range(10) for y in [4, 2, 1])<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">To quit picocom, you need to press Ctrl-a, then Ctrl-q.</div><div class="line"></div><div class="line">For more information see:</div><div class="line"></div><div class="line">&lt;https://github.com/micropython/micropython/tree/master/esp8266&gt;</div><div class="line">&lt;http://micropython.org/resources/docs/en/latest/esp8266/esp8266/quickref.html&gt;</div><div class="line"></div><div class="line"></div><div class="line">## WebREPL (web browser interactive prompt)</div><div class="line"></div><div class="line">```git clone https://github.com/micropython/webrepl.git</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import webrepl</div><div class="line">webrepl.start()</div></pre></td></tr></table></figure>
 <h3 id="Listing-file-and-more"><a href="#Listing-file-and-more" class="headerlink" title="Listing file and more"></a>Listing file and more</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">import os</div><div class="line">os.listdir()</div></pre></td></tr></table></figure>
 <p>Pressing ctrl-E will enter a special paste mode</p>
 <h3 id="DHT22"><a href="#DHT22" class="headerlink" title="DHT22"></a>DHT22</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import dht</div><div class="line">import machine, time</div><div class="line">d = dht.DHT22(machine.Pin(5))</div><div class="line">while True:</div><div class="line">  d.measure()</div><div class="line">  d.temperature(), d.humidity()</div><div class="line">  time.sleep(10)</div></pre></td></tr></table></figure>
@@ -108,7 +106,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://loosak.github.io/hexo-documentation/hexo-documentation/2017/01/01/microPython/" data-id="cixrtkmyq000bxtv0ano7118q" class="article-share-link">Share</a>
+      <a data-url="http://loosak.github.io/hexo-documentation/hexo-documentation/2017/01/01/microPython/" data-id="cixrtoz3m000d6wv05ffzne5i" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexo-documentation/tags/ESP8266/">ESP8266</a></li></ul>
@@ -190,11 +188,11 @@
           </li>
         
           <li>
-            <a href="/hexo-documentation/2017/01/08/hello-there/">test</a>
+            <a href="/hexo-documentation/2017/01/08/Man2/">Man2</a>
           </li>
         
           <li>
-            <a href="/hexo-documentation/2017/01/08/Man2/">Man2</a>
+            <a href="/hexo-documentation/2017/01/08/hello-there/">test</a>
           </li>
         
           <li>
