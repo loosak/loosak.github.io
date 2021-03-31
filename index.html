@@ -1,51 +1,55 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://api.mapy.cz/loader.js"></script>
+    <script type="text/javascript">Loader.load()</script>
+    <title>Weather</title>
+</head>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Welcome! : ">
+<body>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <div class="container my-5 mx-auto">
 
-    <title>Welcome!</title>
-  </head>
+        <h1 class="text-muted text-center my-4">Weather App</h1>
 
-  <body>
+        <form class="change-location my-4 text-center text-muted">
+            <label for="city">Enter a location for weather information</label>
+            <input type="text" name="city" class="form-control p-4">
+        </form>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/loosak">View on GitHub</a>
+        <div class="card shadow-lg rounded">
+            
+            <img src="https://cms-assets.tutsplus.com/uploads/users/107/posts/26240/image/18-april-weather-icon-sun.jpg" class="time card-img-top">
+            <div class="icon bg-light mx-auto text-center">
+            <!-- icon here later -->
+            </div>
+            <div class="text-muted text-uppercase text-center details">
+            <h5 class="my-3">City name</h5>
+            <div class="my-3">Weather condition</div>
+            <div class="display-4 my-4">
+                <span>temp</span>
+                <span>&deg;C</span>
+            </div>
+            </div>
+        </div>
 
-          <h1 id="project_title">Welcome!</h1>
-          <h2 id="project_tagline">Last updated: just now</h2>
+        <div class="refresh"></div>
+            <button type="button" class="btn btn-primary btn-lg btn-block">Refresh</button>
+        </div>
+    </div> 
 
-        </header>
+    <div class="card shadow-lg rounded">
+        <div id="mapa" style="height:300px;"></div>
     </div>
+    <!-- <script src="fetch-async.js"></script> -->
+    <script src="js/forecast.js"></script>
+    <script src="js/app.js"></script>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a id="loosakgithubio" class="anchor" href="#loosakgithubio" aria-hidden="true"><span class="octicon octicon-link"></span></a>loosak.github.io</h1>
-
-<h2>
-<a id="hello-there" class="anchor" href="#hello-there" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hello there</h2>
-
-<h3>
-<a id="this-is-large-header" class="anchor" href="#this-is-large-header" aria-hidden="true"><span class="octicon octicon-link"></span></a>This is large header</h3>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+</body>
 </html>
