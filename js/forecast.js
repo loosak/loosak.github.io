@@ -1,14 +1,14 @@
-console.log('forecast');
+console.log('__forecast__');
 
-const CITY = "Brno,CZ";
 const API_ID = "14f53b553cd123cad205a0fb4ff25106";
 
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&units=metric&appid=${API_ID}`;
-const options = {};
+const getWeather = async (city) => {
 
-async function loadWeather() {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_ID}`;
+    const options = {};
 	return (await fetch(url, options)).json();
-}
+
+};
 
 /*
 const weather = {
@@ -53,3 +53,12 @@ const weather = {
     cod: 200
 };
 */
+
+const getForecast = async (cityId) => {
+
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${cityId}&units=metric&appid=${API_ID}`;
+    const options = {};
+	return (await fetch(url, options)).json();
+
+};
+
